@@ -2,18 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Restaurant Apps</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TerasLian Apps</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
   </head>
   <body>
-    <h1>Restaurant Apps Starter Project</h1>
-    <p>Hallo coders! Anda berhasil menjalankan starter project.</p>
-    <p>
-      Jangan lupa untuk menggunakan salah satu gambar yang berada pada ./images/heros
-      sebagai background hero elemen.
-    </p>
-    <img src="./images/heros/hero-image_1.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_2.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_3.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_4.jpg" width="450" alt="" />
+    <a href="#content" class="skip-link">Ke Konten Selanjutnya ?</a>
+    <!-- Nav Mobile  -->
+    <div class="menumob">
+      <button class="iconmenu" id="menu">☰</button>
+      <div class="iconmenu">Teras Lian</div>
+      <div>&nbsp;</div>
+    </div>
+    <nav id="drawer" class="navmob">
+      <ul class="navlistmob">
+        <li class="navitemsmob"><a href="">Beranda</a></li>
+        <li class="navitemsmob"><a href="#">Favorit</a></li>
+        <li class="navitemsmob"><a target="_blank" href="https://www.linkedin.com/in/sarifht/">Tentang</a></li>
+      </ul>
+    </nav>
+
+    <!-- Nav Desktop  -->
+    <nav class="nav">
+      <a class="logo" href=""><h1>Teras Lian</h1></a>
+      <ul class="navlist">
+        <li class="navitems"><a href="">Beranda</a></li>
+        <li class="navitems"><a href="#">Favorit</a></li>
+        <li class="navitems"><a target="_blank" href="https://www.linkedin.com/in/sarifht/">Tentang</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero" alt="Jumbotron">
+      <div tabindex="0" class="hero_text">
+        <h1 class="herotitle">Selamat Datang di TerasLian</h1>
+        <p class="herosubtitle">Cari Restoran Favorit Kamu</p>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <main id="content">
+      <section class="content">
+        <div class="select">
+          <h1><u tabindex="0">Pilih Restoran</u></h1>
+          <div class="list" id="data"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer-->
+    <footer class="footer">
+      <p>Copyright © 2024 - TerasLian Apps</p>
+      <a class="info" href="#!">Privacy Policy</a>
+      <span href="#!">|</span>
+      <a class="info" href="#!">Terms of Use</a>
+    </footer>
   </body>
 </html>
