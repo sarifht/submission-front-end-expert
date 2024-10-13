@@ -24,7 +24,7 @@ main.addEventListener("click", function () {
 });
 
 // Mengambil data json dari file DATA.json
-import("../data/DATA.json").then(({ default: jsonData }) => {
+import("../public/data/DATA.json").then(({ default: jsonData }) => {
   let datas = jsonData["restaurants"];
   let dataList = "";
   datas.forEach(function (data) {
