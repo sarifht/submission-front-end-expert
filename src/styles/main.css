@@ -66,8 +66,9 @@ a {
   text-decoration: none;
 }
 .nav {
-  background-color: #fb9300;
+  background-color: #075985;
   display: flex;
+  padding: 2vh;
   width: 100%;
   font-size: 14px;
   font-weight: 600;
@@ -89,7 +90,7 @@ a {
   display: inline-block;
 }
 .logo h1 {
-  color: #f5e6ca;
+  color: #ffffff;
 }
 .navitems {
   display: inline-block;
@@ -102,7 +103,7 @@ a {
   display: inline-block;
   padding: 1.3em;
   text-decoration: none;
-  color: #343f56 !important;
+  color: #ffffff !important;
 }
 .nav a:hover {
   text-decoration: none;
