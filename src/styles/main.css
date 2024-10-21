@@ -228,18 +228,13 @@ main {
 .skip-link:focus {
   top: 150px;
 }
+
+/* Footer Section */
 footer {
-  color: #f5e6ca;
-  font-size: 14px;
+  color: #ffffff;
+  font-size: 16px;
   width: 100%;
   text-align: center;
   padding: 2em;
-  background-color: #fb9300;
-}
-footer p {
-  padding: 12px;
-}
-footer .info {
-  text-decoration: none;
-  padding: 20px;
+  background-color: #475569;
 }
