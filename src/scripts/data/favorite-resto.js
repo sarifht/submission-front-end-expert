@@ -9,7 +9,7 @@ const dbTerasLian = openDB(DATABASE_NAME, DATABASE_VERSION, {
   },
 });
 
-const FavoriteRestoIdb = {
+const favoriteResto = {
   async getResto(id) {
     return (await dbTerasLian).get(OBJECT_STORE_NAME, id);
   },
@@ -24,4 +24,4 @@ const FavoriteRestoIdb = {
   },
 };
 
-export default FavoriteRestoIdb;
+export default favoriteResto;
