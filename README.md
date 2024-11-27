@@ -16,10 +16,16 @@ git clone https://github.com/sarifht/submission-front-end-expert.git
 
 ### Submission 1
 
-Berada pada branch "main"
+Berada pada branch "main" dan branch "submission-1"
 
 ```
 git checkout main
+```
+
+atau bisa mengunakan branch submission-1
+
+```
+git checkout submission-1
 ```
 
 ### Submission 2
