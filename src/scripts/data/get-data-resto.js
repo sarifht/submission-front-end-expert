@@ -1,4 +1,4 @@
-import API_ENDPOINT from "../globals/api-endpoint";
+import API_ENDPOINT from "../config/api-endpoint";
 
 class getDataResto {
   static async homeRestorant() {
