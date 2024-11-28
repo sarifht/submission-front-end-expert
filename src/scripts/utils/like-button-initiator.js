@@ -1,5 +1,5 @@
-import FavoriteRestoIdb from '../data/favoriteresto-idb';
-import { createLikeButtonTemplate, createLikedButtonTemplate } from '../views/templates/template-creator';
+import FavoriteRestoIdb from "../data/favorite-resto";
+import { createLikeButtonTemplate, createLikedButtonTemplate } from "../views/templates/template-creator";
 
 const LikeButtonInitiator = {
   async init({ likeButtonContainer, resto }) {
@@ -27,8 +27,8 @@ const LikeButtonInitiator = {
   _renderLike() {
     this._likeButtonContainer.innerHTML = createLikeButtonTemplate();
 
-    const likeButton = document.querySelector('#likeButton');
-    likeButton.addEventListener('click', async () => {
+    const likeButton = document.querySelector("#likeButton");
+    likeButton.addEventListener("click", async () => {
       await FavoriteRestoIdb.putResto(this._resto);
       this._renderButton();
     });
@@ -37,8 +37,8 @@ const LikeButtonInitiator = {
   _renderLiked() {
     this._likeButtonContainer.innerHTML = createLikedButtonTemplate();
 
-    const likeButton = document.querySelector('#likeButton');
-    likeButton.addEventListener('click', async () => {
+    const likeButton = document.querySelector("#likeButton");
+    likeButton.addEventListener("click", async () => {
       await FavoriteRestoIdb.deleteResto(this._resto.id);
       this._renderButton();
     });
