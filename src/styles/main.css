@@ -25,7 +25,7 @@ a {
 
 /* Menu Mobile */
 .menumob {
-  background-color: #fb9300;
+  background-color: #c2410c;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -38,7 +38,7 @@ a {
   border-bottom: 2px solid #343f56;
 }
 .navmob {
-  background-color: #fb9300;
+  background-color: #c2410c;
   display: flex;
   font-size: 14px;
   font-weight: 600;
@@ -60,7 +60,7 @@ a {
 .iconmenu {
   padding: 20px;
   font-size: 30px;
-  background-color: #fb9300;
+  background-color: #c2410c;
   border: none;
   color: #f5e6ca !important;
 }
@@ -73,7 +73,7 @@ a {
 
 /* Nav Desktop */
 .nav {
-  background-color: #fb9300;
+  background-color: #c2410c;
   display: flex;
   width: 100%;
   font-size: 14px;
@@ -106,7 +106,7 @@ a {
 }
 .navitems a {
   position: relative;
-  color: #000;
+  color: #64748b;
   text-decoration: none;
 }
 
@@ -186,13 +186,13 @@ main {
 .judul-menu {
   padding-bottom: 5px;
   margin-top: 10px;
-  color: #fb9300;
+  color: #c2410c;
   text-align: center;
 }
 .judul-detail {
   padding-bottom: 5px;
   margin-top: 10px;
-  color: #fb9300;
+  color: #c2410c;
 }
 
 /* List Item */
@@ -217,7 +217,7 @@ main {
   border-radius: 5px;
   position: absolute;
   padding: 5px 10px 5px;
-  background-color: #fb9300;
+  background-color: #c2410c;
   color: #f5e6ca;
   text-align: left;
 }
@@ -245,7 +245,7 @@ main {
 }
 .list_item_title:hover {
   opacity: 0.5;
-  color: #fb9300;
+  color: #c2410c;
 }
 .list_item_title a {
   margin: 20px 0 20px -20px;
@@ -344,7 +344,7 @@ main {
   padding: 1em 0;
 }
 .categorie-restaurant {
-  background-color: #fb9300;
+  background-color: #c2410c;
   color: #f5e6ca;
   padding: 0.5em 1.25em;
   margin: 0 0.25em;
@@ -402,7 +402,7 @@ main {
   position: absolute;
   top: -100px;
   left: 0;
-  background-color: #fb9300;
+  background-color: #c2410c;
   color: rgba(255, 255, 255, 0.918);
   padding: 10px;
   z-index: 100;
@@ -419,7 +419,7 @@ footer {
   width: 100%;
   text-align: center;
   padding: 2em;
-  background-color: #fb9300;
+  background-color: #c2410c;
 }
 footer p {
   padding: 12px;
