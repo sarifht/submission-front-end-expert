@@ -35,6 +35,14 @@ Berada branch "submission-2"
 git checkout submission-2
 ```
 
+### Submission 3
+
+Berada branch "submission-3"
+
+```
+git checkout submission-3
+```
+
 ...
 
 Ditulis oleh: Sarif Hidayatullah
