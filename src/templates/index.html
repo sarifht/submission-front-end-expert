@@ -4,25 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Resto Sarif berlokasi di Batam" />
-
-    <!-- Inisialisasi Website pada Tab Browser -->
+    <meta name="description" content="List Catalogue Restaurant Favorite for you" />
+    <meta name="theme-color" content="#e28401" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <link rel="icon" href="favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous" />
     <title>Sarif Resto</title>
-    <link rel="icon" href="../public/images/favIcon.ico" type="image/x-icon" />
   </head>
-
   <body>
     <a href="#content" class="skip-link">Ke Konten Selanjutnya ?</a>
     <!-- Nav Mobile  -->
-    <div class="menumob">
+    <header class="menumob">
       <button class="iconmenu" id="menu">☰</button>
       <div class="iconmenu">Sarif Resto</div>
       <div>&nbsp;</div>
-    </div>
+    </header>
     <nav id="drawer" class="navmob">
       <ul class="navlistmob">
-        <li class="navitemsmob"><a href="">Beranda</a></li>
-        <li class="navitemsmob"><a href="#">Favorit</a></li>
+        <li class="navitemsmob"><a href="#/home">Beranda</a></li>
+        <li class="navitemsmob"><a href="#/favorite">Favorit</a></li>
         <li class="navitemsmob"><a target="_blank" href="https://www.linkedin.com/in/sarifht/">Tentang</a></li>
       </ul>
     </nav>
@@ -31,29 +39,14 @@
     <nav class="nav">
       <a class="logo" href=""><h1>Sarif Resto</h1></a>
       <ul class="navlist">
-        <li class="navitems"><a href="">Beranda</a></li>
-        <li class="navitems"><a href="#">Favorit</a></li>
+        <li class="navitems"><a href="#/home">Beranda</a></li>
+        <li class="navitems"><a href="#/favorite">Favorit</a></li>
         <li class="navitems"><a target="_blank" href="https://www.linkedin.com/in/sarifht/">Tentang</a></li>
       </ul>
     </nav>
 
-    <!-- Hero -->
-    <div class="hero" alt="Jumbotron">
-      <div tabindex="0" class="hero_text">
-        <h1 class="herotitle">Selamat Datang di Sarif Resto</h1>
-        <p class="herosubtitle">Cari Restoran Favorit Kamu</p>
-      </div>
-    </div>
-
     <!-- Content -->
-    <main id="content">
-      <section class="content">
-        <div class="select">
-          <h1><u tabindex="0">Pilih Restoran</u></h1>
-          <div class="list" id="data"></div>
-        </div>
-      </section>
-    </main>
+    <main id="mainContent" tabindex="0"></main>
 
     <!-- Footer-->
     <footer class="footer">
