@@ -1,5 +1,5 @@
 // Sarif Hidayatullah
-import FavoriteRestoIdb from "../../data/favorite-resto";
+import FavoriteRestoIdb from "../../data/favoriteresto-idb";
 import { createRestoItemTemplate, emptyFavorit } from "../templates/template-creator";
 
 const Favorite = {

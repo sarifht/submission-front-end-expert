@@ -1,6 +1,6 @@
 // Sarif Hidayatullah
 import UrlParser from "../../routes/url-parser";
-import TheRestoDbSource from "../../data/get-data-resto";
+import TheRestoDbSource from "../../data/theresto-db-source";
 import { createRestoDetailTemplate } from "../templates/template-creator";
 import LikeButtonInitiator from "../../utils/like-button-initiator";
 

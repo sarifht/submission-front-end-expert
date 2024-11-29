@@ -1,5 +1,5 @@
 // Sarif Hidayatullah
-import TheRestoDbSource from "../../data/get-data-restoe";
+import TheRestoDbSource from "../../data/theresto-db-source";
 import { createRestoItemTemplate, createJumbotron } from "../templates/template-creator";
 
 const Home = {

@@ -1,3 +1,4 @@
+/* Sarif Hidayatullah  */
 @media screen and (min-width: 500px) {
   .menumob {
     display: none;
@@ -29,6 +30,31 @@
     width: 100%;
     text-align: center;
     border-bottom: 2px solid #343f56;
+  }
+
+  /*
+		Detail List Restaurant
+	*/
+  .grid-detail {
+    display: grid;
+    font-size: 16px;
+    padding: 5em 0 1em 1em;
+    justify-content: center;
+    align-items: center;
+  }
+  .detail-img {
+    width: 92%;
+    object-fit: cover;
+    margin-top: -35px;
+  }
+  .desc-pad {
+    padding: 0 2em;
+    font-size: 16px;
+  }
+  /* Reviews */
+  .restaurant-reviews {
+    padding: 0;
+    grid-template-columns: 1fr;
   }
 }
 @media screen and (min-width: 650px) {

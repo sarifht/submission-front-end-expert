@@ -10,6 +10,8 @@ https://github.com/sarifht/submission-front-end-expert.git
 
 Jangan lupa pindah ke branch "submission-2"
 
+Ini saya menggunakan submission saya sebelumnya yang sudah saya modifikasi.
+
 ...
 
 Ditulis oleh: Sarif Hidayatullah
