@@ -1,6 +1,6 @@
 // Sarif Hidayatullah
-import TheRestoDbSource from "../../data/theresto-db-source";
-import { createRestoItemTemplate, createJumbotron } from "../templates/template-creator";
+import TheRestoDbSource from '../../data/theresto-db-source';
+import { createRestoItemTemplate, createJumbotron } from '../templates/template-creator';
 
 const Home = {
   async render() {
@@ -20,10 +20,10 @@ const Home = {
   async afterRender() {
     const restos = await TheRestoDbSource.homeRestorant();
 
-    const jumbotronContainer = document.querySelector("#jumbotron");
+    const jumbotronContainer = document.querySelector('#jumbotron');
     jumbotronContainer.innerHTML += createJumbotron;
 
-    const restosContainer = document.querySelector("#restos");
+    const restosContainer = document.querySelector('#restos');
     restos.forEach((resto) => {
       restosContainer.innerHTML += createRestoItemTemplate(resto);
     });

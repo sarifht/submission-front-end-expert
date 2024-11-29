@@ -1,6 +1,6 @@
 // Sarif Hidayatullah
-import FavoriteRestoIdb from "../../data/favoriteresto-idb";
-import { createRestoItemTemplate, emptyFavorit } from "../templates/template-creator";
+import FavoriteRestoIdb from '../../data/favoriteresto-idb';
+import { createRestoItemTemplate, emptyFavorit } from '../templates/template-creator';
 
 const Favorite = {
   async render() {
@@ -17,8 +17,8 @@ const Favorite = {
 
   async afterRender() {
     const restos = await FavoriteRestoIdb.getAllRestos();
-    const restosContainer = document.querySelector("#restos");
-    const restosEmpty = document.querySelector("#kosong");
+    const restosContainer = document.querySelector('#restos');
+    const restosEmpty = document.querySelector('#kosong');
 
     if (restos.length > 0) {
       restos.forEach((resto) => {

@@ -1,8 +1,8 @@
 // Sarif Hidayatullah
-import UrlParser from "../../routes/url-parser";
-import TheRestoDbSource from "../../data/theresto-db-source";
-import { createRestoDetailTemplate } from "../templates/template-creator";
-import LikeButtonInitiator from "../../utils/like-button-initiator";
+import UrlParser from '../../routes/url-parser';
+import TheRestoDbSource from '../../data/theresto-db-source';
+import { createRestoDetailTemplate } from '../templates/template-creator';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
   async render() {
@@ -17,11 +17,11 @@ const Detail = {
     const resto = await TheRestoDbSource.detailRestorant(url.id);
     console.log(resto);
 
-    const restoContainer = document.querySelector("#detail-resto");
+    const restoContainer = document.querySelector('#detail-resto');
     restoContainer.innerHTML = createRestoDetailTemplate(resto);
 
     LikeButtonInitiator.init({
-      likeButtonContainer: document.querySelector("#likeButtonContainer"),
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
       resto: {
         id: resto.restaurant.id,
         name: resto.restaurant.name,
