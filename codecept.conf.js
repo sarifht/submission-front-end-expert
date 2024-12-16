@@ -1,5 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies */
-const { setHeadlessWhen, setCommonPlugins } = require('@codeceptjs/configure');
+const { setHeadlessWhen, setCommonPlugins } = require("@codeceptjs/configure");
 // turn on headless mode when running with HEADLESS=true environment variable
 // export HEADLESS=true && npx codeceptjs run
 setHeadlessWhen(process.env.HEADLESS);
@@ -9,17 +8,22 @@ setCommonPlugins();
 
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: 'e2e/**/*.spec.js',
-  output: 'e2e/outputs',
+  tests: "e2e/**/*.spec.js",
+  output: "e2e/output",
   helpers: {
-    Puppeteer: {
-      url: 'http://127.0.0.1:9008',
+    Playwright: {
+      browser: "chromium",
+      url: "http://localhost:8080", // Update this to match your development server URL
       show: true,
-      windowSize: '1200x900',
     },
   },
   include: {
-    I: './steps_file.js',
+    I: "./steps_file.js",
   },
-  name: 'Submission Expert 2 Restaurant',
+  name: "Submission FE Expert 3",
+  plugins: {
+    screenshotOnFail: {
+      enabled: true,
+    },
+  },
 };

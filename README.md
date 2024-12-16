@@ -5,10 +5,10 @@ Ini adalah submission pertama pada kelas ini.
 
 ...
 
-## Ini adalah gabungan submission 1,2 dan 3
-
 Source kode dapat dilihat pada repository Github berikut:
 https://github.com/sarifht/submission-front-end-expert.git
+
+Jangan lupa! ini sedang berapada di branch "submission-3"
 
 ...
 
