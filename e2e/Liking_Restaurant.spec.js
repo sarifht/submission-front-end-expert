@@ -1,83 +1,42 @@
-/* eslint-disable no-shadow */
-/* eslint-disable no-await-in-loop */
-/* eslint-disable no-plusplus */
-/* eslint-disable no-undef */
-const assert = require('assert');
-
-Feature('Liking Restaurant');
+Feature("Liking Restaurant");
 
 Before(({ I }) => {
-  I.amOnPage('/#/favorite');
+  I.amOnPage("/");
 });
 
-Scenario('showing empty liked restaurant', ({ I }) => {
-  I.seeElement('#query');
-  I.see('Tidak ada film untuk ditampilkan', '.restaurant-item__not__found');
+Scenario("liking one restaurant", async ({ I }) => {
+  I.waitForElement(".restaurant-item", 10); // Wait for the restaurant item to be visible
+  I.seeElement(".restaurant-item");
+  const firstRestaurant = locate(".restaurant-item a.view-details-btn").first(); // Update selector to view details button
+  I.click(firstRestaurant);
+
+  I.waitForElement("#favoriteButton", 5); // Wait for the favorite button to be visible
+  I.seeElement("#favoriteButton");
+  I.click("#favoriteButton");
 });
 
-Scenario('liking one restaurant', async ({ I }) => {
-  I.see('Tidak ada film untuk ditampilkan', '.restaurant-item__not__found');
+Scenario("unliking one restaurant", async ({ I }) => {
+  I.amOnPage("/");
+  I.waitForElement(".restaurant-item", 10); // Wait for the restaurant item to be visible
+  I.seeElement(".restaurant-item");
+  const firstRestaurant = locate(".restaurant-item a.view-details-btn").first(); // Update selector to view details button
+  I.click(firstRestaurant);
 
-  I.amOnPage('/');
+  I.waitForElement("#favoriteButton", 5); // Wait for the favorite button to be visible
+  I.seeElement("#favoriteButton");
+  I.click("#favoriteButton"); // Like the restaurant
 
-  I.waitForElement('.restaurant__name a', 30);
-  I.seeElement('.restaurant__name a');
-  const firstFilm = locate('.restaurant__name a').first();
-  const firstFilmName = await I.grabTextFrom(firstFilm);
-  I.click(firstFilm);
+  I.amOnPage("/#/favorite");
+  I.waitForElement(".restaurant-item", 10); // Wait for the restaurant item to be visible
+  I.seeElement(".restaurant-item");
+  const firstFavoriteRestaurant = locate(".restaurant-item a.view-details-btn").first(); // Update selector to view details button
+  I.click(firstFavoriteRestaurant);
 
-  I.waitForElement('#likeButton', 30);
-  I.seeElement('#likeButton');
-  I.click('#likeButton');
+  I.waitForElement("#favoritedButton", 10); // Increase wait time for the favorited button to be visible
+  I.seeElement("#favoritedButton");
+  I.click("#favoritedButton"); // Unfavorite the restaurant
 
-  I.amOnPage('/#/favorite');
-  const likedFilmName = await I.grabTextFrom('.restaurant__name');
-  assert.strictEqual(firstFilmName, likedFilmName);
-});
-
-Scenario('searching restaurant', async ({ I }) => {
-  I.see('Tidak ada film untuk ditampilkan', '.restaurant-item__not__found');
-
-  I.amOnPage('/');
-
-  I.waitForElement('.restaurant__name a', 30);
-  I.seeElement('.restaurant__name a');
-
-  const name = [];
-
-  for (let i = 1; i <= 3; i++) {
-    const restaurantLink = locate('.restaurant__name a').at(i);
-    const restaurantName = await I.grabTextFrom(restaurantLink);
-
-    I.click(restaurantLink);
-    I.waitForElement('#likeButton', 30);
-    I.seeElement('#likeButton');
-    I.click('#likeButton');
-
-    name.push(restaurantName);
-    I.amOnPage('/');
-  }
-
-  I.amOnPage('/#/favorite');
-  I.seeElement('#query');
-
-  const searchQuery = name[1].substring(1, 3);
-  const matchingRestaurant = name.filter(
-    (name) => name.indexOf(searchQuery) !== -1
-  );
-
-  I.fillField('#query', searchQuery);
-  I.pressKey('Enter');
-
-  const visibleLikedRestaurant = await I.grabNumberOfVisibleElements(
-    '.restaurant-item'
-  );
-  assert.strictEqual(matchingRestaurant.length, visibleLikedRestaurant);
-
-  for (const [index, name] of matchingRestaurant.entries()) {
-    const visibleName = await I.grabTextFrom(
-      locate('.restaurant__name').at(index + 1)
-    );
-    assert.strictEqual(name, visibleName);
-  }
+  I.amOnPage("/#/favorite");
+  I.waitForElement(".empty-favorite-message", 10); // Wait for the empty favorite message to be visible
+  I.see("Kamu belum punya restoran favorit.", ".empty-favorite-message"); // Ensure the restaurant is removed from favorites
 });

@@ -1,27 +1,37 @@
 import { openDB } from 'idb';
-import CONFIG from '../globals/config';
 
-const { DATABASE_NAME, DATABASE_VERSION, OBJECT_STORE_NAME } = CONFIG;
+const DATABASE_NAME = 'restaurant-database';
+const DATABASE_VERSION = 1;
+const OBJECT_STORE_NAME = 'restaurants';
 
-const dbTerasLian = openDB(DATABASE_NAME, DATABASE_VERSION, {
-  upgrade(database) {
-    database.createObjectStore(OBJECT_STORE_NAME, { keyPath: 'id' });
+const dbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
+  upgrade(db) {
+    db.createObjectStore(OBJECT_STORE_NAME, { keyPath: 'id' });
   },
 });
 
-const FavoriteRestoIdb = {
-  async getResto(id) {
-    return (await dbTerasLian).get(OBJECT_STORE_NAME, id);
+const FavoriteRestaurantIdb = {
+  async getRestaurant(id) {
+    if (!id) {
+      return;
+    }
+    return (await dbPromise).get(OBJECT_STORE_NAME, id);
   },
-  async getAllRestos() {
-    return (await dbTerasLian).getAll(OBJECT_STORE_NAME);
+  async getAllRestaurants() {
+    return (await dbPromise).getAll(OBJECT_STORE_NAME);
   },
-  async putResto(resto) {
-    return (await dbTerasLian).put(OBJECT_STORE_NAME, resto);
+  async putRestaurant(restaurant) {
+    if (!restaurant || !restaurant.id) {
+      return;
+    }
+    return (await dbPromise).put(OBJECT_STORE_NAME, restaurant);
   },
-  async deleteResto(id) {
-    return (await dbTerasLian).delete(OBJECT_STORE_NAME, id);
+  async deleteRestaurant(id) {
+    if (!id) {
+      return;
+    }
+    return (await dbPromise).delete(OBJECT_STORE_NAME, id);
   },
 };
 
-export default FavoriteRestoIdb;
+export default FavoriteRestaurantIdb;
